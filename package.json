@@ -1,5 +1,5 @@
 {
-  "name": "@ckeditor/ckeditor5-build-classic",
+  "name": "custom/ckeditor5-build-classic",
   "version": "19.0.0",
   "description": "The classic editor build of CKEditor 5 – the best browser-based rich text editor.",
   "keywords": [
@@ -64,19 +64,23 @@
     "node": ">=8.0.0",
     "npm": ">=5.7.1"
   },
-  "author": "CKSource (http://cksource.com/)",
+  "author": "IgorPopach",
   "license": "GPL-2.0-or-later",
-  "homepage": "https://ckeditor.com/ckeditor-5",
+  "homepage": "https://github.com/IgorPopach/CKEditor",
   "bugs": "https://github.com/ckeditor/ckeditor5/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ckeditor/ckeditor5-build-classic.git"
+    "url": "https://github.com/IgorPopach/CKEditor.git"
+  },
+  "gh-pages-deploy": {
+    "staticpath": "dist"
   },
   "scripts": {
     "build": "webpack --mode production",
     "lint": "eslint --quiet '**/*.js'",
     "stylelint": "stylelint --quiet --allow-empty-input 'theme/**/*.css' 'docs/**/*.css'",
-    "preversion": "npm run build"
+    "preversion": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "lint-staged": {
     "**/*.js": [
@@ -96,6 +100,7 @@
     }
   },
   "dependencies": {
-    "@babel/runtime": "^7.11.2"
+    "@babel/runtime": "^7.11.2",
+    "gh-pages": "^3.1.0"
   }
 }
