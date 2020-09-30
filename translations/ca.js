@@ -1,0 +1,1 @@
+(function(d){	const l = d['ca'] = d['ca'] || {};	l.dictionary=Object.assign(		l.dictionary||{},		{"Block quote":"Cita de bloc",Bold:"Negreta",Cancel:"Cancel·lar","Cannot upload file:":"No es pot pujar l'arxiu:",Italic:"Cursiva",Save:"Desar"}	);l.getPluralForm=function(n){return (n != 1);;};})(window.CKEDITOR_TRANSLATIONS||(window.CKEDITOR_TRANSLATIONS={}));
